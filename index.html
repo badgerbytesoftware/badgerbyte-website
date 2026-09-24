@@ -3,17 +3,51 @@
 <head>
 <meta charset="utf-8">
 <title>BadgerByte Software — Technology and marketing for BC insurance</title>
-<meta name="viewport" content="width=1440">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="BadgerByte Software is a BC-based technical partner for brokerages, agencies and insurance businesses: custom software, system migrations, AI, marketing, cloud hosting and IT support.">
 <link rel="icon" type="image/svg+xml" href="assets/badgerbyte-logo.svg">
 <style>
 html{scroll-behavior:smooth}
-#page{width:100%!important;min-width:1440px}
+#page{width:100%!important}
+html{overflow-x:hidden}
+@media (min-width:1024px){
+#page{min-width:1440px}
 header,#top,section[aria-label="Partners"]{padding-left:max(64px,calc((100% - 1312px)/2))!important;padding-right:max(64px,calc((100% - 1312px)/2))!important}
 #services,#capabilities,#insurance,#process,#contact,footer{padding-left:max(120px,calc((100% - 1200px)/2))!important;padding-right:max(120px,calc((100% - 1200px)/2))!important}
+}
+@media (max-width:1023px){
+header,#top,section[aria-label="Partners"],#services,#capabilities,#insurance,#process,#contact,footer{padding-left:32px!important;padding-right:32px!important}
+#top{padding-top:72px!important;padding-bottom:64px!important;gap:48px!important}
+#services,#capabilities,#insurance,#process,#contact{padding-top:80px!important;padding-bottom:80px!important}
+footer{padding-top:56px!important;padding-bottom:32px!important}
+#top h1{font-size:44px!important}
+#top p{font-size:17px!important}
+#page h2{font-size:34px!important}
+.r-split{flex-direction:column!important;align-items:flex-start!important;gap:20px!important}
+.r-split p{max-width:none!important}
+.r-grid3,.r-grid4,.r-grid4p{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.r-partners{grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important}
+#insurance{flex-direction:column!important;gap:40px!important}
+.r-side{width:100%!important}
+#contact{flex-direction:column!important;align-items:stretch!important;gap:40px!important}
+#contact-form{width:100%!important}
+.r-frow{flex-direction:column!important;gap:40px!important}
+.r-flinks{gap:40px!important;flex-wrap:wrap!important}
+}
+@media (max-width:640px){
+header,#top,section[aria-label="Partners"],#services,#capabilities,#insurance,#process,#contact,footer{padding-left:20px!important;padding-right:20px!important}
+#top{padding-top:48px!important;padding-bottom:48px!important;gap:36px!important}
+#services,#capabilities,#insurance,#process,#contact{padding-top:56px!important;padding-bottom:56px!important}
+#top h1{font-size:32px!important}
+#top h1 br{display:none}
+#page h2{font-size:28px!important}
+.r-grid3,.r-grid4,.r-grid4p,.r-grid2,.r-grid2f{grid-template-columns:1fr!important}
+.r-partners{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+#contact-form input,#contact-form textarea{font-size:16px!important}
+}
 </style>
 <script>
-(function(){function fit(){var w=window.innerWidth;document.body.style.zoom=w<1440?(w/1440):'';}
+(function(){function fit(){var w=window.innerWidth;document.body.style.zoom=(w>=1024&&w<1440)?(w/1440):'';var m=document.querySelector('.r-mock');if(m){m.style.zoom=w<1024?Math.min(1,(w-(w<=640?40:64))/1200):'';}}
 window.addEventListener('resize',fit);document.addEventListener('DOMContentLoaded',fit);})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +78,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 <section id="top" style="box-sizing: border-box; padding: 112px 64px 96px; display: flex; flex-direction: column; align-items: center; gap: 72px; background-image: linear-gradient(#EDEDE9 1px, transparent 1px), linear-gradient(90deg, #EDEDE9 1px, transparent 1px); background-size: 64px 64px; background-position: center top;">
 <div style="display: flex; flex-direction: column; align-items: center; gap: 28px; max-width: 980px; text-align: center;">
 
-<h1 style="margin: 0; font-size: 76px; line-height: 1.02; font-weight: 500; letter-spacing: -0.045em; color: #111113;">Software built for how<br>BC insurance actually works</h1>
+<h1 style="margin: 0; font-size: 76px; line-height: 1.02; font-weight: 500; letter-spacing: -0.045em; color: #111113;">Software built for how <br>BC insurance actually works</h1>
 <p style="margin: 0; max-width: 700px; font-size: 20px; line-height: 1.55; color: #5B5D63; letter-spacing: -0.01em;">We're modernizing the insurance industry through technical consulting, custom-built solutions and AI integration for brokerages, agencies and insurance businesses across BC.</p>
 <div style="display: flex; gap: 12px; margin-top: 8px;">
 <a href="#contact" style="height: 48px; padding: 0 22px; border-radius: 10px; background: #111113; color: #FFFFFF; font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 8px;">Talk to us about your process
@@ -55,7 +89,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 </div>
 
 <!-- Product-style mockup -->
-<div style="width: 1200px; height: 760px; box-sizing: border-box; border: 1px solid #E0E0DB; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 0 rgba(17,17,19,0.04), 0 24px 64px -24px rgba(17,17,19,0.18); display: flex; flex-direction: column; overflow: hidden; text-align: left;">
+<div class="r-mock" style="width: 1200px; height: 760px; box-sizing: border-box; border: 1px solid #E0E0DB; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 0 rgba(17,17,19,0.04), 0 24px 64px -24px rgba(17,17,19,0.18); display: flex; flex-direction: column; overflow: hidden; text-align: left;">
 <div style="height: 44px; flex-shrink: 0; border-bottom: 1px solid #EEEEEA; display: flex; align-items: center; padding: 0 16px; gap: 8px;"><span style="width: 11px; height: 11px; border-radius: 50%; background: rgb(227, 227, 222)"></span><span style="width: 11px; height: 11px; border-radius: 50%; background: rgb(227, 227, 222)"></span><span style="width: 11px; height: 11px; border-radius: 50%; background: rgb(227, 227, 222)"></span><span style="margin-left: 16px; font-family: &quot;Geist Mono&quot;, ui-monospace, monospace; font-size: 12px; color: rgb(107, 109, 115)">Example build · Insurance Renewal Desk</span><button type="button" aria-label="AI assistant" style="margin-left: auto; position: relative; width: 30px; height: 30px; padding: 0; border-radius: 8px; border: 1px solid #E3E5F8; background: #F6F6FD; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F5BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"></path></svg><span style="position: absolute; top: -3px; right: -3px; width: 8px; height: 8px; border-radius: 50%; background: #4F5BD5; border: 2px solid #FFFFFF;"></span></button></div>
 <div style="flex-grow: 1; display: flex; min-height: 0;">
 
@@ -165,7 +199,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 </div>
 </section><section aria-label="Partners" style="box-sizing: border-box; padding: 48px 64px 56px; border-top: 1px solid #E6E6E2; border-bottom: 1px solid #E6E6E2; display: flex; flex-direction: column; align-items: center; gap: 28px; background: #F7F7F5;">
 <p style="margin: 0; font-size: 14px; color: #5B5D63;">Working with insurance teams and businesses across Canada</p>
-<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; width: 1200px;">
+<div class="r-partners" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; width: 1200px;">
 <div style="height: 56px; display: flex; align-items: center; justify-content: center;"><img src="assets/carmaxx.png" alt="Carmaxx" style="height: 30px; max-width: 150px; object-fit: contain; display: block; filter: grayscale(1); opacity: 0.75;"></div>
 <div style="height: 56px; display: flex; align-items: center; justify-content: center;"><img src="assets/peacehills.png" alt="Peace Hills Insurance" style="height: 40px; max-width: 150px; object-fit: contain; display: block; filter: grayscale(1); opacity: 0.75;"></div>
 <div style="height: 56px; display: flex; align-items: center; justify-content: center;"><img src="assets/ifs.png" alt="IFS" style="height: 40px; max-width: 150px; object-fit: contain; display: block; filter: grayscale(1); opacity: 0.75;"></div>
@@ -177,14 +211,14 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 
 <!-- SERVICES -->
 <section id="services" style="box-sizing: border-box; padding: 128px 120px 120px; display: flex; flex-direction: column; gap: 64px; background: #FFFFFF;">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px;">
+<div class="r-split" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px;">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 700px;">
 <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #4F5BD5; letter-spacing: 0.02em;">What we do</span>
 <h2 style="margin: 0; font-size: 52px; line-height: 1.06; font-weight: 500; letter-spacing: -0.04em;">One team, from first conversation to shipped solution</h2>
 </div>
 <p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 1.6; color: #5B5D63;">Start with a conversation, a review of what you have today, or a new build.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+<div class="r-grid3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
 <!-- card 1 -->
 <article style="border: 1px solid #E6E6E2; border-radius: 16px; background: #F9F9F7; display: flex; flex-direction: column; overflow: hidden;">
 <div style="height: 240px; border-bottom: 1px solid #E6E6E2; display: flex; align-items: center; justify-content: center; background: #F3F3F0;">
@@ -250,14 +284,14 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 
 <!-- CAPABILITIES -->
 <section id="capabilities" style="box-sizing: border-box; padding: 128px 120px 120px; display: flex; flex-direction: column; gap: 56px; background: #FFFFFF; border-top: 1px solid #E6E6E2;">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px;">
+<div class="r-split" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px;">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 700px;">
 <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #4F5BD5; letter-spacing: 0.02em;">What else we do</span>
 <h2 style="margin: 0; font-size: 52px; line-height: 1.06; font-weight: 500; letter-spacing: -0.04em;">More than software</h2>
 </div>
 <p style="margin: 0; max-width: 400px; font-size: 17px; line-height: 1.6; color: #5B5D63;">Most engagements start with the three services above. Behind them is one team for everything else your business runs on.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: #E6E6E2; border: 1px solid #E6E6E2; border-radius: 16px; overflow: hidden;">
+<div class="r-grid4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: #E6E6E2; border: 1px solid #E6E6E2; border-radius: 16px; overflow: hidden;">
 <div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5L4 8l3 3"></path><path d="M4 8h10a3 3 0 0 1 3 3v5"></path><path d="M14 13l3 3 3-3"></path></svg>
 <h3 style="margin: 0; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">Migrations and integrations</h3>
@@ -303,7 +337,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 
 <!-- BC INSURANCE -->
 <section id="insurance" style="box-sizing: border-box; padding: 128px 120px; display: flex; gap: 96px; background: #F7F7F5; border-top: 1px solid #E6E6E2;">
-<div style="width: 440px; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px;">
+<div class="r-side" style="width: 440px; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px;">
 <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #4F5BD5; letter-spacing: 0.02em;">Built for BC insurance</span>
 <h2 style="margin: 0; font-size: 52px; line-height: 1.06; font-weight: 500; letter-spacing: -0.04em;">We already speak your language</h2>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #5B5D63;">Generic agencies spend the first month learning how the BC insurance industry works. We already know how BC brokerages, agencies and carriers operate day to day.</p>
@@ -311,7 +345,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
 </a>
 </div>
-<div style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #E6E6E2; border: 1px solid #E6E6E2; border-radius: 16px; overflow: hidden;">
+<div class="r-grid2" style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #E6E6E2; border: 1px solid #E6E6E2; border-radius: 16px; overflow: hidden;">
 <div style="background: #FFFFFF; padding: 32px; display: flex; flex-direction: column; gap: 12px;">
 <img src="assets/car-shield.svg" alt="" style="width: 34px; height: 24px; object-fit: contain; object-position: left center; display: block;">
 <h3 style="margin: 0; font-size: 17px; font-weight: 500; letter-spacing: -0.01em;">Autoplan workflows</h3>
@@ -351,7 +385,7 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #4F5BD5; letter-spacing: 0.02em;">How we work</span>
 <h2 style="margin: 0; font-size: 52px; line-height: 1.06; font-weight: 500; letter-spacing: -0.04em;">From a messy process to a solution your team relies on</h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid #111113;">
+<div class="r-grid4p" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid #111113;">
 <div style="padding: 28px 28px 0 0; display: flex; flex-direction: column; gap: 14px;">
 <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5B5D63;">01</span>
 <h3 style="margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -0.02em;">Investigate</h3>
@@ -390,11 +424,11 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 </div>
 </div>
 <form id="contact-form" novalidate style="width: 520px; flex-shrink: 0; box-sizing: border-box; background: #1B1B1E; border: 1px solid #2C2C31; border-radius: 16px; padding: 36px; display: flex; flex-direction: column; gap: 18px;">
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
+<div class="r-grid2f" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B4B6BC;">Name<input type="text" id="c-name" name="name" autocomplete="name" required placeholder="Jane Smith" style="height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 8px; border: 1px solid #34343A; background: #111113; color: #FFFFFF; font: inherit; font-size: 15px;"></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B4B6BC;">Company<input type="text" id="c-company" name="company" autocomplete="organization" placeholder="Brokerage or business" style="height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 8px; border: 1px solid #34343A; background: #111113; color: #FFFFFF; font: inherit; font-size: 15px;"></label>
 </div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
+<div class="r-grid2f" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B4B6BC;">Work email<input type="email" id="c-email" name="email" autocomplete="email" required placeholder="jane@company.ca" style="height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 8px; border: 1px solid #34343A; background: #111113; color: #FFFFFF; font: inherit; font-size: 15px;"></label>
 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #B4B6BC;">Phone<input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="(604) 555-0123" style="height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 8px; border: 1px solid #34343A; background: #111113; color: #FFFFFF; font: inherit; font-size: 15px;"></label>
 </div>
@@ -406,13 +440,13 @@ a{color:#111113;text-decoration:none}a:hover{color:#4F5BD5}
 
 <!-- FOOTER -->
 <footer id="about" style="flex-shrink: 0; box-sizing: border-box; padding: 72px 120px 40px; background: #111113; color: #B4B6BC; border-top: 1px solid #26262B; display: flex; flex-direction: column; gap: 56px;">
-<div style="display: flex; justify-content: space-between; gap: 64px;">
+<div class="r-frow" style="display: flex; justify-content: space-between; gap: 64px;">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 360px;">
 <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; letter-spacing: -0.02em; color: #FFFFFF;">
 <span style="width: 44px; height: 44px; border-radius: 10px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/badgerbyte-logo.svg" alt="" style="width: 32px; height: 27px; object-fit: contain; display: block;"></span>BadgerByte</span>
 <p style="margin: 0; font-size: 14px; line-height: 1.6;">Custom software, technical consultancy and AI for British Columbia businesses, with a focus on the insurance industry.</p>
 </div>
-<div style="display: flex; gap: 88px; font-size: 14px;">
+<div class="r-flinks" style="display: flex; gap: 88px; font-size: 14px;">
 <div style="display: flex; flex-direction: column; gap: 12px;"><span style="color: #FFFFFF; font-weight: 500; margin-bottom: 4px;">Services</span><a href="#services" style="color: #B4B6BC;">Custom software</a><a href="#services" style="color: #B4B6BC;">Technical consultancy</a><a href="#services" style="color: #B4B6BC;">AI implementation</a><a href="#capabilities" style="color: #B4B6BC;">Migrations and integrations</a><a href="#capabilities" style="color: #B4B6BC;">Marketing and growth</a><a href="#capabilities" style="color: #B4B6BC;">Cloud and security</a><a href="#capabilities" style="color: #B4B6BC;">IT support</a></div>
 <div style="display: flex; flex-direction: column; gap: 12px;"><span style="color: #FFFFFF; font-weight: 500; margin-bottom: 4px;">Contact</span><a href="mailto:admin@badgerbytesoftware.com" style="color: #B4B6BC; display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8E9097" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>admin@badgerbytesoftware.com</a><span style="display: flex; align-items: center; gap: 8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8E9097" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="10" r="3"></circle><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"></path></svg>British Columbia, Canada</span></div>
 </div>
