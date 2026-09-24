@@ -1,0 +1,4 @@
+# Copy to .dev.vars (gitignored) for local development, then restart `npm run dev`.
+# Get the key from https://resend.com/api-keys
+# The sending domain badgerbytesoftware.com must be verified in Resend (SPF + DKIM).
+RESEND_API_KEY=re_your_key_here
