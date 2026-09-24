@@ -11,3 +11,9 @@
 
 # Logs
 *.log
+
+# Cloudflare / Node
+node_modules/
+.wrangler/
+.dev.vars
+.claude/
