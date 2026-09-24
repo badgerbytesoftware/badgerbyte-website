@@ -78,7 +78,7 @@ export async function onRequestPost(context) {
 
   try {
     await sendEmail(env, {
-      to: "admin@badgerbytesoftware.com",
+      to: ["leo@badgerbytesoftware.com", "rafid@badgerbytesoftware.com"],
       from: "BadgerByte Website <webmailer@badgerbytesoftware.com>",
       replyTo: email,
       subject,
