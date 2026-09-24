@@ -53,8 +53,17 @@ Without it the form returns an error and shows the fallback "email us" message.
 
 ## Notes
 
-- Contact form submissions are emailed to `admin@badgerbytesoftware.com`, with the
-  visitor's address set as reply-to. Change `to` in `functions/api/contact.js` to route
+- Contact form submissions are emailed to `leo@badgerbytesoftware.com` and
+  `rafid@badgerbytesoftware.com`, with the visitor's address set as reply-to. Change `to` in `functions/api/contact.js` to route
   them elsewhere.
 - Outgoing emails are sent `from: webmailer@badgerbytesoftware.com` — the
   `badgerbytesoftware.com` domain must be verified in the Resend account or sends will fail.
+
+## Domains
+
+DNS is managed at GoDaddy (nameservers `domaincontrol.com`):
+
+- `www.badgerbytesoftware.com` is a CNAME to `badgerbyte-website.pages.dev`, and is also added
+  under the Pages project's **Custom domains** (that is what issues its SSL certificate).
+- The root `badgerbytesoftware.com` uses GoDaddy domain forwarding (301) to `www`, since
+  GoDaddy DNS can't point the root domain at Cloudflare Pages. `www` is the canonical address.
