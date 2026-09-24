@@ -11,6 +11,8 @@ html{scroll-behavior:smooth}
 #page{width:100%!important}
 html{overflow-x:hidden}
 .r-shot{transition:filter .4s ease,opacity .4s ease}
+.r-logo{filter:grayscale(1);transition:filter .4s ease}
+#work article:hover .r-logo{filter:grayscale(0)}
 #work article:hover .r-shot{filter:grayscale(0)!important;opacity:1!important}
 @media (prefers-reduced-motion:reduce){.r-shot{transition:none}}
 @media (min-width:1024px){
